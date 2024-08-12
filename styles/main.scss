@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&display=swap");
+@import "../partials/responsives";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background: no-repeat right center url("../assets/bg-illustration.svg")
+    #111729;
+  font-family: "Outfit", sans-serif;
+  button,
+  input {
+    font-family: inherit;
+  }
+  .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content {
+      width: 40%;
+      @include mobile {
+        width: 90%;
+      }
+      @include mobileLandscape {
+        width: 50%;
+      }
+      .logo {
+        width: min-content;
+        margin: auto;
+        padding-bottom: 20px;
+      }
+      .input {
+        display: flex;
+        background-color: #111729;
+        height: 55px;
+        padding: 5px;
+        border: #3662e3 2px solid;
+        border-radius: 15px;
+        input {
+          flex: 1;
+          border: 0;
+          outline: 0;
+          padding: 0 10px;
+          background-color: inherit;
+          color: #f2f5f9;
+          font-size: 15px;
+          &::placeholder {
+            color: #4e80ee33;
+          }
+        }
+        .button {
+          padding: 0 25px;
+          background-color: #3662e3;
+          color: #f2f5f9;
+          border: 0;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+
+      .top {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+      }
+      .main {
+        .qr-quote-container {
+          padding-bottom: 80px;
+          @include mobileLandscape {
+           padding-bottom: 30px;
+          }
+          .qr-quote {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: #445d85;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .bg {
+              padding: 20px;
+              background-color: #f2f5f9;
+              border-radius: 20px;
+            }
+          }
+        }
+        .buttons {
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          a {
+            padding: 0 25px;
+            background-color: #3662e3;
+            color: #f2f5f9;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            .icon {
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
